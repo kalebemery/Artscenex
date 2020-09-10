@@ -10,12 +10,20 @@ namespace Artsy.Data
 {
     public enum PieceType
     {
-
+        Photography = 1,
+        Painting,
+        Sculpture,
+        Prints,
+        Textile,
+        Ceramic,
+        Calligraphy,
+        Other
     }
     public class Piece
     {
         [Key]
         public int PieceId { get; set; }
+
         [Required]
         public string Name { get; set; }
         [Required]
@@ -24,12 +32,11 @@ namespace Artsy.Data
         public double Price { get; set; }
         [Required]
         public int Stock { get; set; }
-        public PieceType PieceType { get; set; }
-        public bool IsOriginal { get; set; }
+        public PieceType? PieceType { get; set; }
         [Required]
         [ForeignKey(nameof(Artist))]
         public int ArtistId { get; set; }
         public Artist Artist { get; set; }
-
+        public DateTimeOffset CreatedUTC { get; set; }
     }
 }

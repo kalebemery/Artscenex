@@ -1,0 +1,72 @@
+﻿@model Artsy.Models.ArtistDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ArtistDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtistId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArtistId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtistBio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArtistBio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtistType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArtistType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUTC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pieces)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pieces)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.ArtistId  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

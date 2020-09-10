@@ -33,6 +33,10 @@ namespace Artsy.Data
         }
 
         public DbSet<Artist> Artists { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Piece> Pieces { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

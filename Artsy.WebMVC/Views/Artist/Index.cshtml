@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Artsy.Models.ArtistList>
+
+@{
+    ViewBag.Title = "Artist Directory";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Artist", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtistId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ArtistId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ArtistId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ArtistId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -13,8 +13,6 @@ namespace Artsy.Data
         [Key]
         public int TransactionId { get; set; }
         [Required]
-        public double PiecePrice { get; set; }
-        [Required]
         [ForeignKey(nameof(Customer))]
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
@@ -23,5 +21,28 @@ namespace Artsy.Data
         [ForeignKey(nameof(Piece))]
         public int PieceId { get; set; }
         public Piece Piece { get; set; }
+        public DateTime CreatedUTC { get; set; }
+        public double PiecePrice { get; set; }
+        [Required]
+        public Guid Id { get; set; }
     }
 }
+
+
+//Is it necessary to have these as foreign keys? what are the advantages of having a foreign key as opposed to just referencing it from the
+//piece and customer class
+
+//public class Transaction
+//{
+//    [Key]
+//    public int PieceId { get; set; }
+//    
+//    [ForeignKey(nameof(Customer))]
+//    public int CustomerId { get; set; }
+//    public Customer Customer { get; set; }
+
+//    [Required]
+//    [ForeignKey(nameof(Piece))]
+//    public int PieceId { get; set; }
+//    public Piece Piece { get; set; }
+//}

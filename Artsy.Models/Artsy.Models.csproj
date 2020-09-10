@@ -57,21 +57,33 @@
     <Compile Include="Admin\AdminCreate.cs" />
     <Compile Include="Admin\AdminDetail.cs" />
     <Compile Include="Admin\AdminEdit.cs" />
+    <Compile Include="Artist\ArtistList.cs" />
     <Compile Include="Artist\ArtistCreate.cs" />
     <Compile Include="Artist\ArtistDetail.cs" />
     <Compile Include="Artist\ArtistEdit.cs" />
-    <Compile Include="Piece\PieceCreate.cs" />
-    <Compile Include="Piece\PieceDetail.cs" />
-    <Compile Include="Piece\PieceEdit.cs" />
+    <Compile Include="Customer\CustomerCreate.cs" />
+    <Compile Include="Customer\CustomerDetail.cs" />
+    <Compile Include="Customer\CustomerEdit.cs" />
+    <Compile Include="PieceContent\PieceCreate.cs" />
+    <Compile Include="PieceContent\PieceDetail.cs" />
+    <Compile Include="PieceContent\PieceEdit.cs" />
+    <Compile Include="PieceContent\PieceList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transaction\TransactionCreate.cs" />
     <Compile Include="Transaction\TransactionDetail.cs" />
-    <Compile Include="Transaction\TransactionEdit.cs" />
+    <Compile Include="User\UserDetail.cs" />
+    <Compile Include="User\UserEdit.cs" />
+    <Compile Include="User\UserListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Artsy.Data\Artsy.Data.csproj">
+      <Project>{C593C143-36FF-44AA-9BA3-011EC4756050}</Project>
+      <Name>Artsy.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

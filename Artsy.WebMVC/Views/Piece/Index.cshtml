@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Artsy.Models.PieceList>
+
+@{
+    ViewBag.Title = "Artwork Log";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Piece", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PieceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtistId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PieceId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.PieceId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.PieceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.PieceId })
+        </td>
+    </tr>
+}
+
+</table>

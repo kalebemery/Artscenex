@@ -15,9 +15,10 @@ namespace Artsy.Data
         public Guid Id { get; set; }
         [Required]
         public string FullName { get; set; }
+        [Required]
         public string CustomerBio { get; set; }
         [Required]
         public DateTimeOffset CreatedUTC { get; set; }
-        public DateTimeOffset ModifiedUTC { get; set; }
+        public DateTimeOffset? ModifiedUTC { get; set; }
     }
 }
