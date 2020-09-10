@@ -1,4 +1,4 @@
-# **Artscenex**
+# **Artscene**
 ## **Kaleb Emery**
 #### *Software Development Bootcamp @ Eleven Fifty Academy*
 
