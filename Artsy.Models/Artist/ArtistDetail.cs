@@ -10,12 +10,18 @@ namespace Artsy.Models
 {
     public class ArtistDetail
     {
-        public int ArtistId { get; set; }       
-        public string FullName { get; set; }       
+        [Display(Name = "Artist Id")]
+        public int ArtistId { get; set; }
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
+        [Display(Name = "Artist Bio")]
         public string ArtistBio { get; set; }
+        [Display(Name = "Artist Type")]
         public ArtistType? ArtistType { get; set; }
-        public int? Rating { get; set; }       
+        public int? Rating { get; set; }
+        [Display(Name = "Account Created")]
         public DateTimeOffset CreatedUTC { get; set; }
+        [Display(Name = "Account Modified")]
         public DateTimeOffset? ModifiedUTC { get; set; }
         public List<Piece> Pieces { get; set; }
         

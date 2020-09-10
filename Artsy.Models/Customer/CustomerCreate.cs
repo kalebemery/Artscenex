@@ -10,8 +10,10 @@ namespace Artsy.Models
     public class CustomerCreate
     {
         [Required]
+        [Display(Name = "Full Name")]
         public string FullName { get; set; }
         [Required]
+        [Display(Name = "Customer Bio:")]
         public string CustomerBio { get; set; }
     }
 }

@@ -5,7 +5,7 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 5px;
+    padding-left: 15px;
     padding-right: 15px;
 }
 
@@ -20,9 +20,12 @@
 input,
 select,
 textarea {
+    max-width: 280px;
 }
 
-.jumbotron
-{
-
+.create {
+    color: black;
+    border-bottom: 2px solid yellow;
+    margin-left: 500px;
+    margin-top: -10px;
 }

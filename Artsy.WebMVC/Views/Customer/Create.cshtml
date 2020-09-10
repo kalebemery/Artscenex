@@ -6,11 +6,11 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>CustomerCreate</h4>
+        <h3>Create a Customer</h3>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2", style = "font-family: 'Times New Roman', Times, serif; font-size: 20px;" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
@@ -18,7 +18,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CustomerBio, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CustomerBio, htmlAttributes: new { @class = "control-label col-md-2", style = "font-family: 'Times New Roman', Times, serif; font-size: 20px;" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CustomerBio, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CustomerBio, "", new { @class = "text-danger" })
